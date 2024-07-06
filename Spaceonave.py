@@ -56,14 +56,8 @@ class Ship(pygame.sprite.Sprite):
     def ship_animation(self): # Animation
         keys = pygame.key.get_pressed()
         self.movespeed = 3
-        shrink = pygame.mixer.Sound('SFX\shrink.mp3')
-        shrink_sound_played = 0
 
         if keys[pygame.K_LSHIFT]:
-            if shrink_sound_played > 0:
-                shrink.play()
-                self.shrink_sound_played += 1
-
             self.movespeed = 5
             self.ship_index += 0.2
             if self.ship_index >= len(self.ship_sprites): 
@@ -157,7 +151,7 @@ class Animation(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(center=pos)
 
     def update(self):
-        self.animation_index += 0.2
+        self.animation_index += 0.25
         if int(self.animation_index) >= len(self.frames):
             self.kill()
         else:
@@ -214,6 +208,7 @@ test_font = pygame.font.Font('Font/Pixeltype.ttf', 50)
 start_time = 0
 ammo = 3
 final_score = 0
+high_score = 0
 
 # Space Ship
 ship = pygame.sprite.GroupSingle()
@@ -231,6 +226,7 @@ animation = pygame.sprite.Group()
 # Musics and Sound Effects
 laser = pygame.mixer.Sound('SFX\laser.mp3')
 play = pygame.mixer.Sound('SFX\play.mp3')
+shrink = pygame.mixer.Sound('SFX\shrink.mp3')
 
 background_music = pygame.mixer.Sound('SFX/background.mp3')
 background_music.play(loops = -1),
@@ -239,14 +235,27 @@ background_music.play(loops = -1),
 background = pygame.image.load('Sprites/Backgorunds/Background.png').convert()
 
 # Menu
+#PlayButton
 play1 = pygame.image.load('Sprites/Play1.png').convert()
 play2 = pygame.image.load('Sprites/Play2.png').convert()
 play_sprites = [play1, play2]
 play_index = 0
+scale_factor = 4
+play_scaled = pygame.transform.scale(play_sprites[play_index], (play_sprites[play_index].get_width() * scale_factor, play_sprites[play_index].get_height() * scale_factor))
+playrect = play_scaled.get_rect(center=(150, 530))
 
+howplay1 = test_font.render(f'Move with WASD', False, 'WHITE')
+howplay2 = test_font.render(f'Shrink with [Shift]', False, 'WHITE')
+howplay3 = test_font.render(f'Shoot with [Space]', False, 'WHITE')
+howplay1_rect = howplay1.get_rect(midbottom=(150, 360))
+howplay2_rect = howplay2.get_rect(midbottom=(150, 410))
+howplay3_rect = howplay2.get_rect(midbottom=(150, 460))
+
+#GameDisplay
 display = pygame.image.load('Sprites/Display/display.png').convert_alpha()
 displayrect = display.get_rect(midtop=(150, 0))
 
+#AMMO
 ammo_display_list = []
 ammo_display_list.append(pygame.image.load('Sprites/Display/1bullet.png').convert_alpha())
 ammo_display_list.append(pygame.image.load('Sprites/Display/2bullet.png').convert_alpha())
@@ -254,12 +263,10 @@ ammo_display_list.append(pygame.image.load('Sprites/Display/3bullet.png').conver
 ammodispimage = ammo_display_list[(ammo-1)]
 ammodisprect = ammodispimage.get_rect(midtop=(150, 0))
 
-scale_factor = 4
-play_scaled = pygame.transform.scale(play_sprites[play_index], (play_sprites[play_index].get_width() * scale_factor, play_sprites[play_index].get_height() * scale_factor))
-playrect = play_scaled.get_rect(center=(150, 400))
-
-titlelogo = pygame.image.load('Sprites/title.png').convert()
+titlelog = pygame.image.load('Sprites/title.png').convert_alpha()
+titlelogo = pygame.transform.scale(titlelog, (titlelog.get_width() * 2, titlelog.get_height() * 2))
 titlerect = titlelogo.get_rect(center=(150, 150))
+
 
 # Timers
 brick_timer = pygame.USEREVENT + 1
@@ -311,6 +318,8 @@ while True:
                     laser.play()
                     bullets.add(Bullet(ship.sprite.rect.center))
                     ammo -= 1
+                if event.key == pygame.K_LSHIFT:
+                    shrink.play()
 
     if playing:
         # Background
@@ -347,14 +356,27 @@ while True:
 
     else:
         finalscore_surf = test_font.render(f'Final Score: {final_score}', False, 'WHITE')
-        finalscore_rect = finalscore_surf.get_rect(midbottom=(150, 350))
+        finalscore_rect = finalscore_surf.get_rect(midbottom=(150, 360))
 
         screen.blit(background, (0, 0))
         play_scaled = pygame.transform.scale(play_sprites[play_index], (play_sprites[play_index].get_width() * scale_factor, play_sprites[play_index].get_height() * scale_factor))
+        
         screen.blit(play_scaled, playrect)
         screen.blit(titlelogo, titlerect)
+
         if start_time > 0:
             screen.blit(finalscore_surf, finalscore_rect)
+            if final_score > high_score:
+                high_score = final_score
+
+            highlscore_surf = test_font.render(f'High Score: {high_score}', False, 'WHITE')
+            highscore_rect = finalscore_surf.get_rect(midbottom=(150, 410))
+            screen.blit(highlscore_surf, highscore_rect)
+        
+        else:
+            screen.blit(howplay1, howplay1_rect)
+            screen.blit(howplay2, howplay2_rect)
+            screen.blit(howplay3, howplay3_rect)
     
     pygame.display.update()
     clock.tick(60)
