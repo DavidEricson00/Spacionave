@@ -43,9 +43,17 @@
     </li>
     <li>🐍 <strong>Instale as Dependências:</strong>
         <pre><code>pip install pygame</code></pre>
+        <ul>
+            <li>Certifique-se de ter o <strong>Python</strong> instalado em sua máquina. Você pode verificar isso executando <code>python --version</code> ou <code>python3 --version</code> no terminal.</li>
+            <li>Se você estiver usando um ambiente virtual, ative-o antes de instalar as dependências.</li>
+        </ul>
     </li>
     <li>🎮 <strong>Execute o Jogo:</strong>
         <pre><code>python main.py</code></pre>
+        <ul>
+            <li>Certifique-se de estar no diretório correto (onde está localizado o arquivo <code>main.py</code>) antes de executar este comando.</li>
+            <li>Caso esteja usando Python 3 e o comando acima não funcione, tente <code>python3 main.py</code>.</li>
+        </ul>
     </li>
 </ol>
 
