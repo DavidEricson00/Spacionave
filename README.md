@@ -39,7 +39,7 @@
 <p>Siga os passos abaixo para executar o jogo em sua máquina:</p>
 <ol>
     <li>🔧 <strong>Clone o Repositório:</strong>
-        <pre><code>git clone https://github.com/seu-usuario/spacionave.git</code></pre>
+        <pre><code>git clone https://github.com/DavidEricson00/Spacionave.git</code></pre>
     </li>
     <li>🐍 <strong>Instale as Dependências:</strong>
         <pre><code>pip install pygame</code></pre>
