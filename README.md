@@ -52,18 +52,15 @@
         <pre><code>python main.py</code></pre>
         <ul>
             <li>Certifique-se de estar no diretório correto (onde está localizado o arquivo <code>main.py</code>) antes de executar este comando.</li>
-            <li>Caso esteja usando Python 3 e o comando acima não funcione, tente <code>python3 main.py</code>.</li>
+            <li>Se houver algum problema para iniciar o jogo diretamente, verifique se o nome do arquivo principal está correto e se as permissões de execução estão configuradas.</li>
         </ul>
     </li>
 </ol>
 
 <h2>✨ Créditos</h2>
 <ul>
-    <li>Música: https://www.youtube.com/watch?v=mRN_T6JkH-c&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd
+    <li>Música: https://www.youtube.com/watch?v=mRN_T6JkH-c&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd</li>
     <li>Desenvolvimento: David Ericson</li>
 </ul>
 
 <h4>~ David Ericson, 08/07/2024</h4>
-
-
-</html>
