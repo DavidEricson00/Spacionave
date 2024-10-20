@@ -48,6 +48,9 @@
             <li>Se você estiver usando um ambiente virtual, ative-o antes de instalar as dependências.</li>
         </ul>
     </li>
+    <li>📁 <strong>Navegue até o Diretório:</strong>
+        <pre><code>cd Spacionave</code></pre>
+    </li>
     <li>🎮 <strong>Execute o Jogo:</strong>
         <pre><code>python main.py</code></pre>
         <ul>
