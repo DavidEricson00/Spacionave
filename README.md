@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <h1 align="center">
     ⭐ Spacionave
 </h1>
