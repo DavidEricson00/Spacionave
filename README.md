@@ -3,66 +3,58 @@
 </h1>
 
 <div align="center">
-    <img src="https://i.imgur.com/SNJoyGN.png" alt="Logo do Jogo" width="200">
+    <img src="https://i.imgur.com/SNJoyGN.png" alt="Game Logo" width="200">
 </div>
 
-<h2>💫 Sobre o Jogo</h2>
-<p>Spacionave é um jogo estilo endless runner desenvolvido em Python utilizando a biblioteca Pygame. O jogador controla uma nave espacial que deve desviar de obstáculos e sobreviver o máximo possível.</p>
+<h2>💫 About the Game</h2>
+<p>Spacionave is an endless runner game developed in Python using the Pygame library. The player controls a spaceship that must avoid obstacles and survive as long as possible.</p>
 
-<h2>📌 Objetivos</h2>
-<p>Melhorar minhas habilidades de programação e aprender mais sobre o desenvolvimento de jogos, especialmente no uso de bibliotecas gráficas como o Pygame.</p>
+<h2>📌 Objectives</h2>
+<p>Improve my programming skills and learn more about game development, especially in using graphical libraries like Pygame.</p>
 
-<h2>🚀 Fotos do Projeto</h2>
+<h2>🚀 Project Screenshots</h2>
 <div align="center">
     <img src="https://i.imgur.com/oO4y9DF.png" alt="Screenshot 1" width="45%">
     <img src="https://imgur.com/cWZYLhU.png" alt="Screenshot 2" width="45%">
 </div>
 
-<h2>🛠️ Tecnologias Utilizadas</h2>
+<h2>🛠️ Technologies Used</h2>
 <ul>
-    <li>📜 <strong>Python</strong>: Linguagem de programação principal.</li>
-    <li>🎮 <strong>Pygame</strong>: Biblioteca utilizada para desenvolvimento de jogos.</li>
+    <li>📜 <strong>Python</strong>: Main programming language.</li>
+    <li>🎮 <strong>Pygame</strong>: Library used for game development.</li>
 </ul>
 
-<h2>🕹️ Funcionalidades Principais</h2>
+<h2>🕹️ Key Features</h2>
 <ul>
-    <li><strong>Controle da Nave:</strong> Movimentação com as teclas WASD, encolhimento e velocidade aumentada com a tecla Shift.</li>
-    <li><strong>Disparo de Balas:</strong> Atirar com a tecla Espaço, limitado por um sistema de munição.</li>
-    <li><strong>Obstáculos:</strong> Diferentes tipos de obstáculos que a nave deve evitar.</li>
-    <li><strong>Animações:</strong> Animações para explosões e movimentação da nave.</li>
-    <li><strong>Sistema de Pontuação:</strong> Contagem do tempo sobrevivido como pontuação.</li>
-    <li><strong>Som e Música:</strong> Efeitos sonoros e música de fundo.</li>
+    <li><strong>Spaceship Control:</strong> Movement with the WASD keys, shrink and speed boost with the Shift key.</li>
+    <li><strong>Shooting Bullets:</strong> Shoot with the Space key, limited by a ammo system.</li>
+    <li><strong>Obstacles:</strong> Different types of obstacles that the spaceship must avoid.</li>
+    <li><strong>Animations:</strong> Animations for explosions and spaceship movement.</li>
+    <li><strong>Scoring System:</strong> Counting the time survived as score.</li>
+    <li><strong>Sound and Music:</strong> Sound effects and background music.</li>
 </ul>
 
-<h2>📝 Como Executar</h2>
-<p>Siga os passos abaixo para executar o jogo em sua máquina:</p>
+<h2>📝 How to Run</h2>
+<p>Follow the steps below to run the game on your machine:</p>
 <ol>
-    <li>🔧 <strong>Clone o Repositório:</strong>
+    <li>🔧 <strong>Clone the Repository:</strong>
         <pre><code>git clone https://github.com/DavidEricson00/Spacionave.git</code></pre>
     </li>
-    <li>🐍 <strong>Instale as Dependências:</strong>
+    <li>🐍 <strong>Install Dependencies:</strong>
         <pre><code>pip install pygame</code></pre>
-        <ul>
-            <li>Certifique-se de ter o <strong>Python</strong> instalado em sua máquina. Você pode verificar isso executando <code>python --version</code> ou <code>python3 --version</code> no terminal.</li>
-            <li>Se você estiver usando um ambiente virtual, ative-o antes de instalar as dependências.</li>
-        </ul>
     </li>
-    <li>📁 <strong>Navegue até o Diretório:</strong>
+    <li>📁 <strong>Navigate to the Directory:</strong>
         <pre><code>cd Spacionave</code></pre>
     </li>
-    <li>🎮 <strong>Execute o Jogo:</strong>
+    <li>🎮 <strong>Run the Game:</strong>
         <pre><code>python main.py</code></pre>
-        <ul>
-            <li>Certifique-se de estar no diretório correto (onde está localizado o arquivo <code>main.py</code>) antes de executar este comando.</li>
-            <li>Se houver algum problema para iniciar o jogo diretamente, verifique se o nome do arquivo principal está correto e se as permissões de execução estão configuradas.</li>
-        </ul>
     </li>
 </ol>
 
-<h2>✨ Créditos</h2>
+<h2>✨ Credits</h2>
 <ul>
-    <li>Música: https://www.youtube.com/watch?v=mRN_T6JkH-c&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd</li>
-    <li>Desenvolvimento: David Ericson</li>
+    <li>Music: https://www.youtube.com/watch?v=mRN_T6JkH-c&list=PLwJjxqYuirCLkq42mGw4XKGQlpZSfxsYd</li>
+    <li>Development: David Ericson</li>
 </ul>
 
 <h4>~ David Ericson, 08/07/2024</h4>
